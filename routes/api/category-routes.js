@@ -8,10 +8,6 @@ router.get('/', (req, res) => {
   // be sure to include its associated Products
   Category.findAll({
     include: [Product]
-    // {
-    //   model: [Product],
-    //   attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
-    // }
   })
     .then(dbCatData => {
       if(!dbCatData) {
